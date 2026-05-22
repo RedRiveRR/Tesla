@@ -1,1 +1,65 @@
-# Tesla
+<div align="center">
+
+# 🏎️ Tesla MCU Vulnerability Dashboard (Web & Network Recon PoC)
+
+```text
+ _____ _____ ____  _        _      ____   ___   ___ _____ 
+|_   _| ____/ ___|| |      / \    |  _ \ / _ \ / _ \_   _|
+  | | |  _| \___ \| |     / _ \   | |_) | | | | | | || |  
+  | | | |___ ___) | |___ / ___ \  |  _ <| |_| | |_| || |  
+  |_| |_____|____/|_____/_/   \_\ |_| \_\\___/ \___/ |_|  
+                                                          
+```
+
+**Bilgi Güvenliği Teknolojileri - Siber Güvenlik Analizi ve Web PoC Projesi**
+
+[![Vulnerability](https://img.shields.io/badge/Vulnerability-Heap%20Overflow-red?style=for-the-badge)](https://github.com/RedRiveRR/Tesla)
+[![Target](https://img.shields.io/badge/Target-Tesla%20MCU%20Baseband-blue?style=for-the-badge)](https://github.com/RedRiveRR/Tesla)
+[![Status](https://img.shields.io/badge/Status-Patched%20(OTA)-success?style=for-the-badge)](https://github.com/RedRiveRR/Tesla)
+
+</div>
+
+## 📑 Proje Özeti (Abstract)
+Bu proje, **Pwn2Own 2023** yarışmasında Synacktiv araştırma ekibi tarafından keşfedilen kritik Tesla Bluetooth (BIP) Baseband zafiyetinin çok boyutlu (multi-dimensional) teknik analizini sunan interaktif bir **Siber Güvenlik Web Gösterge Panelidir (Dashboard)**.
+
+Mevcut sıradan JSON veri tutma sistemlerinden (örneğin `$lib/data/...`) farklı olarak bu repo, elde edilen statik güvenlik verilerini **Glassmorphism**, **Cyberpunk estetiği** ve modern **Vite/TypeScript** teknolojilerini harmanlayarak dinamik olarak oluşturur. Ağ ve donanım zafiyetlerinin modern web teknolojileri (Vanilla JS + CSS) ile nasıl raporlanabileceğine dair akademik bir Proof of Concept (PoC) görevi görür.
+
+## ⚙️ Zafiyetin Anatomisi (Vulnerability Mechanics)
+Bu projenin görselleştirdiği saldırı zinciri, iki temel hafıza bozulması protokolünün istismarına (exploitation) dayanır:
+
+1. **Heap Buffer Overflow (Yığın Taşması):** Tesla araçlarındaki Bluetooth Imaging Protocol (BIP) uygulanışında, özel olarak hazırlanmış zararlı Bluetooth paketleri kullanılarak Bluetooth çipinde yığın taşmasına neden olunmuştur.
+2. **Out-of-Bounds Write (Sınır Dışı Yazma):** Taşma elde edildikten sonra, hafızadaki diğer kritik alanlara veri yazılarak Bluetooth altsisteminden ana bilgi-eğlence (Infotainment - MCU) sistemine "Pivot" işlemi gerçekleştirilmiştir.
+
+## 🚀 Proje Mimarisi ve Kullanılan Teknolojiler
+Bu depo sadece bir güvenlik araştırması değil, aynı zamanda üst düzey bir Frontend raporlama aracıdır:
+
+- **Vite & TypeScript:** Hızlı derleme ve tip güvenliği.
+- **Vanilla CSS (Glassmorphism):** Saf CSS ile donanım ivmeli arka plan bulanıklıkları ve hacker-temalı (neon red/blue) estetik.
+- **Modüler Veri Yapısı:** Tüm zafiyet verileri `src/lib/data/` altındaki izole `.json` dosyalarından okunur. Yeni zafiyet verileri eklendiğinde arayüz kendini otomatik adapte eder.
+
+## 🛠️ Kurulum ve Test (Saldırı Arayüzü Simülasyonu)
+Bu raporlama aracını kendi yerel ağınızda (localhost) ayağa kaldırmak için aşağıdaki adımları izleyin:
+
+```bash
+# Projeyi klonlayın
+git clone https://github.com/RedRiveRR/Tesla.git
+
+# Proje dizinine girin
+cd Tesla
+
+# Bağımlılıkları yükleyin
+npm install
+
+# Geliştirici sunucusunu başlatın
+npm run dev
+```
+
+Sunucu başladıktan sonra `http://localhost:5173` adresine giderek dinamik oluşturulan **Cybersecurity Dashboard** arayüzüne erişebilirsiniz.
+
+## 🛡️ Savunma Mimarisi (Mitigation)
+Tesla, bu zafiyeti tespitinden hemen sonra gelişmiş **Over-The-Air (OTA)** güncelleme sistemi ile uzaktan (OTA Firmware Update) kapatmıştır. Bu tarz donanımsal baseband zafiyetlerine karşı kurumsal düzeyde korunmanın tek yolu donanım sürücülerini sürekli izole (Sandboxing) etmek ve güncel tutmaktır.
+
+---
+
+> **⚠️ Yasal Uyarı ve Etik Bildirim (Disclaimer):**
+> Bu depo ve içerisindeki kodlar/analizler, siber güvenlik bilincini arttırmak, modern web teknolojilerinin raporlama aracı olarak kullanımını göstermek ve üniversite seviyesinde akademik araştırma yapmak amacıyla geliştirilmiştir. Yalnızca savunma (Blue Team) ve bilgi amaçlıdır.
