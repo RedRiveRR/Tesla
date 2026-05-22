@@ -136,7 +136,8 @@ body {
 /* Specific Grid Placements */
 #incident-summary { grid-column: span 12; }
 #attack-vectors { grid-column: span 6; }
-#timeline { grid-column: span 6; }
+#risk-analysis { grid-column: span 6; }
+#timeline { grid-column: span 12; }
 #mitigation { grid-column: span 12; }
 
 @media (max-width: 1024px) {

@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Chart.js for data visualization -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
     <div class="dashboard-container">
@@ -34,6 +36,13 @@
           <h2>[+] Exploit Chain Vectors</h2>
           <div id="vectors-content" class="content-box">
             <!-- Populated by JS -->
+          </div>
+        </section>
+
+        <section class="glass-panel" id="risk-analysis">
+          <h2>[+] CVSS Risk Analysis</h2>
+          <div class="chart-container" style="position: relative; height:300px; width:100%; display:flex; justify-content:center;">
+            <canvas id="cvssChart"></canvas>
           </div>
         </section>
 

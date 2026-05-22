@@ -1,10 +1,13 @@
 import incidentData from './lib/data/index.js';
 
+declare const Chart: any;
+
 document.addEventListener('DOMContentLoaded', () => {
   renderSummary(incidentData.summary);
   renderVectors(incidentData.vectors);
   renderTimeline(incidentData.timeline);
   renderMitigation(incidentData.mitigation);
+  renderChart();
 });
 
 function createDataRow(label: string, value: string): string {
@@ -78,4 +81,41 @@ function renderMitigation(mit: any) {
       <strong>Recommendation:</strong> ${mit.recommendation_for_users}
     </div>
   `;
+}
+
+function renderChart() {
+  const ctx = document.getElementById('cvssChart') as HTMLCanvasElement;
+  if (!ctx) return;
+
+  new Chart(ctx, {
+    type: 'radar',
+    data: {
+      labels: ['Attack Vector', 'Complexity', 'Privileges Required', 'User Interaction', 'Scope', 'Confidentiality', 'Integrity', 'Availability'],
+      datasets: [{
+        label: 'CVSS v3.1 Metrics',
+        data: [8, 7, 9, 10, 5, 10, 10, 10], // Simulated severity metrics
+        backgroundColor: 'rgba(227, 25, 55, 0.2)',
+        borderColor: '#E31937',
+        pointBackgroundColor: '#00f3ff',
+        pointBorderColor: '#fff',
+        pointHoverBackgroundColor: '#fff',
+        pointHoverBorderColor: '#00f3ff'
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      scales: {
+        r: {
+          angleLines: { color: 'rgba(255, 255, 255, 0.1)' },
+          grid: { color: 'rgba(255, 255, 255, 0.1)' },
+          pointLabels: { color: '#94a3b8', font: { family: 'Fira Code', size: 10 } },
+          ticks: { display: false, max: 10, min: 0 }
+        }
+      },
+      plugins: {
+        legend: { labels: { color: '#e2e8f0', font: { family: 'Inter' } } }
+      }
+    }
+  });
 }

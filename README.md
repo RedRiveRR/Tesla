@@ -43,9 +43,10 @@ Bu depo sadece bir güvenlik araştırması değil, aynı zamanda üst düzey bi
 
 - **Vite & TypeScript:** Hızlı derleme ve tip güvenliği.
 - **Vanilla CSS (Glassmorphism):** Saf CSS ile donanım ivmeli arka plan bulanıklıkları ve hacker-temalı estetik.
+- **Chart.js Entegrasyonu:** Dinamik radar grafiği ile zafiyet metriklerinin (CVSS) görselleştirilmesi.
 - **Modüler Veri Yapısı:** Tüm zafiyet verileri `src/lib/data/` altındaki izole `.json` dosyalarından okunur.
 - **Docker Konteynerizasyonu:** Sızma testi laboratuvarı (SecOps) mantığıyla izole edilmiş ağ yapısı.
-- **Red Team Araçları (`scripts/`):** Zafiyeti istismar etmek üzere hazırlanan keşif (Recon) ve sömürü (Exploitation) PoC Python betikleri.
+- **Red/Blue Team Araçları (`scripts/`):** Zafiyeti istismar etmek üzere hazırlanan Python keşif/sömürü kodları ile ağı dinleyip saldırıyı tespit eden IDS savunma betikleri.
 
 ## 🛠️ Kurulum ve Test (Saldırı Arayüzü Simülasyonu)
 
@@ -68,15 +69,18 @@ npm install
 npm run dev
 ```
 
-## ⚔️ Hacker Uçbirimi (Red Team Scripts)
-Proje dizinindeki `scripts/` klasörü, zafiyetin sömürülme anını terminalde simüle eden Python kodları barındırır. Bu betikleri denemek için:
+## ⚔️ Hacker Uçbirimi (Red/Blue Team Scripts)
+Proje dizinindeki `scripts/` klasörü, zafiyetin sömürülme ve engellenme anını terminalde simüle eden Python kodları barındırır. Bu betikleri denemek için:
 
 ```bash
 # Keşif (Recon) işlemini başlatın
 python3 scripts/01_recon_bluetooth.py
 
-# Exploit simülasyonunu çalıştırın
+# Exploit (Saldırı) simülasyonunu çalıştırın
 python3 scripts/02_exploit_heap_overflow.py --target "9C:43:1E:XX:XX:XX"
+
+# Saldırı Tespit (IDS / Blue Team) simülasyonunu çalıştırın
+python3 scripts/03_defense_ids.py
 ```
 
 ## 🛡️ Savunma Mimarisi (Mitigation)
