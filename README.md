@@ -16,6 +16,9 @@
 [![Vulnerability](https://img.shields.io/badge/Vulnerability-Heap%20Overflow-red?style=for-the-badge)](https://github.com/RedRiveRR/Tesla)
 [![Target](https://img.shields.io/badge/Target-Tesla%20MCU%20Baseband-blue?style=for-the-badge)](https://github.com/RedRiveRR/Tesla)
 [![Status](https://img.shields.io/badge/Status-Patched%20(OTA)-success?style=for-the-badge)](https://github.com/RedRiveRR/Tesla)
+[![Docker](https://img.shields.io/badge/Docker-Supported-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://github.com/RedRiveRR/Tesla)
+[![Python](https://img.shields.io/badge/Python-Red_Team-yellow?style=for-the-badge&logo=python&logoColor=white)](https://github.com/RedRiveRR/Tesla)
+[![CI/CD](https://img.shields.io/badge/CI%2FCD-Security_Scan-brightgreen?style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/RedRiveRR/Tesla)
 
 </div>
 
@@ -39,27 +42,42 @@ Bu projenin görselleştirdiği saldırı zinciri, iki temel hafıza bozulması 
 Bu depo sadece bir güvenlik araştırması değil, aynı zamanda üst düzey bir Frontend raporlama aracıdır:
 
 - **Vite & TypeScript:** Hızlı derleme ve tip güvenliği.
-- **Vanilla CSS (Glassmorphism):** Saf CSS ile donanım ivmeli arka plan bulanıklıkları ve hacker-temalı (neon red/blue) estetik.
-- **Modüler Veri Yapısı:** Tüm zafiyet verileri `src/lib/data/` altındaki izole `.json` dosyalarından okunur. Yeni zafiyet verileri eklendiğinde arayüz kendini otomatik adapte eder.
+- **Vanilla CSS (Glassmorphism):** Saf CSS ile donanım ivmeli arka plan bulanıklıkları ve hacker-temalı estetik.
+- **Modüler Veri Yapısı:** Tüm zafiyet verileri `src/lib/data/` altındaki izole `.json` dosyalarından okunur.
+- **Docker Konteynerizasyonu:** Sızma testi laboratuvarı (SecOps) mantığıyla izole edilmiş ağ yapısı.
+- **Red Team Araçları (`scripts/`):** Zafiyeti istismar etmek üzere hazırlanan keşif (Recon) ve sömürü (Exploitation) PoC Python betikleri.
 
 ## 🛠️ Kurulum ve Test (Saldırı Arayüzü Simülasyonu)
-Bu raporlama aracını kendi yerel ağınızda (localhost) ayağa kaldırmak için aşağıdaki adımları izleyin:
+
+### 1. Yöntem: Docker ile İzole Laboratuvar (Önerilen)
+Bu yöntemde, `docker-compose` kullanarak hem hedef paneli hem de saldırgan (attacker) makineyi tek tuşla ağa bağlayabilirsiniz:
 
 ```bash
 # Projeyi klonlayın
 git clone https://github.com/RedRiveRR/Tesla.git
-
-# Proje dizinine girin
 cd Tesla
 
-# Bağımlılıkları yükleyin
-npm install
+# İzole laboratuvarı ayağa kaldırın
+docker-compose up -d --build
+```
+*Sunucu başladıktan sonra `http://localhost:5173` adresine giderek arayüze erişebilirsiniz.*
 
-# Geliştirici sunucusunu başlatın
+### 2. Yöntem: Standart Geliştirici Ortamı (NPM)
+```bash
+npm install
 npm run dev
 ```
 
-Sunucu başladıktan sonra `http://localhost:5173` adresine giderek dinamik oluşturulan **Cybersecurity Dashboard** arayüzüne erişebilirsiniz.
+## ⚔️ Hacker Uçbirimi (Red Team Scripts)
+Proje dizinindeki `scripts/` klasörü, zafiyetin sömürülme anını terminalde simüle eden Python kodları barındırır. Bu betikleri denemek için:
+
+```bash
+# Keşif (Recon) işlemini başlatın
+python3 scripts/01_recon_bluetooth.py
+
+# Exploit simülasyonunu çalıştırın
+python3 scripts/02_exploit_heap_overflow.py --target "9C:43:1E:XX:XX:XX"
+```
 
 ## 🛡️ Savunma Mimarisi (Mitigation)
 Tesla, bu zafiyeti tespitinden hemen sonra gelişmiş **Over-The-Air (OTA)** güncelleme sistemi ile uzaktan (OTA Firmware Update) kapatmıştır. Bu tarz donanımsal baseband zafiyetlerine karşı kurumsal düzeyde korunmanın tek yolu donanım sürücülerini sürekli izole (Sandboxing) etmek ve güncel tutmaktır.
