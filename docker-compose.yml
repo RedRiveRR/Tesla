@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  tesla-dashboard:
+    build: .
+    container_name: tesla_infotainment_poc
+    ports:
+      - "5173:5173"
+    networks:
+      tesla_internal:
+        ipv4_address: 10.13.37.10
+    restart: unless-stopped
+
+  attacker-machine:
+    image: python:3.10-alpine
+    container_name: attacker_machine
+    tty: true
+    volumes:
+      - ./scripts:/scripts
+    networks:
+      tesla_internal:
+        ipv4_address: 10.13.37.20
+    command: ["/bin/sh", "-c", "pip install requests scapy && sleep infinity"]
+
+networks:
+  tesla_internal:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.13.37.0/24
