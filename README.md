@@ -24,6 +24,12 @@ Bu proje, **Pwn2Own 2023** yarışmasında Synacktiv araştırma ekibi tarafınd
 
 Mevcut sıradan JSON veri tutma sistemlerinden (örneğin `$lib/data/...`) farklı olarak bu repo, elde edilen statik güvenlik verilerini **Glassmorphism**, **Cyberpunk estetiği** ve modern **Vite/TypeScript** teknolojilerini harmanlayarak dinamik olarak oluşturur. Ağ ve donanım zafiyetlerinin modern web teknolojileri (Vanilla JS + CSS) ile nasıl raporlanabileceğine dair akademik bir Proof of Concept (PoC) görevi görür.
 
+## 🎥 Demo Video (Proof of Concept)
+Aşağıdaki videoda, geliştirilen Cybersecurity Dashboard'un interaktif arayüzü ve verilerin nasıl görselleştirildiği izlenebilir:
+
+<!-- VİDEONUZU BURAYA EKLEYİN: GitHub'da README dosyasını düzenlerken çektiğiniz mp4 veya gif dosyasını direkt bu satırın üzerine sürükleyip bırakın. GitHub otomatik olarak videoyu buraya gömecektir. -->
+*[Demo videosu buraya eklenecek]*
+
 ## ⚙️ Zafiyetin Anatomisi (Vulnerability Mechanics)
 Bu projenin görselleştirdiği saldırı zinciri, iki temel hafıza bozulması protokolünün istismarına (exploitation) dayanır:
 
