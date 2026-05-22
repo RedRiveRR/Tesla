@@ -137,6 +137,7 @@ body {
 #incident-summary { grid-column: span 12; }
 #attack-vectors { grid-column: span 6; }
 #risk-analysis { grid-column: span 6; }
+#secops-terminals { grid-column: span 12; }
 #timeline { grid-column: span 12; }
 #mitigation { grid-column: span 12; }
 
@@ -228,4 +229,65 @@ body {
   padding-top: 2rem;
   border-top: 1px solid var(--glass-border);
   margin-top: auto;
+}
+
+/* Terminals */
+.terminals-container {
+  display: flex;
+  gap: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .terminals-container { flex-direction: column; }
+}
+
+.terminal-box {
+  flex: 1;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.terminal-header {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.5rem 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.dot {
+  width: 8px; height: 8px; border-radius: 50%;
+}
+.dot.red { background-color: var(--accent-red); box-shadow: 0 0 5px var(--accent-red); }
+.dot.blue { background-color: var(--accent-blue); box-shadow: 0 0 5px var(--accent-blue); }
+
+.terminal-body {
+  padding: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  min-height: 250px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.red-team .terminal-body { color: #ff5555; }
+.blue-team .terminal-body { color: #55ffff; }
+
+.log-line {
+  margin-bottom: 4px;
+  opacity: 0;
+  animation: fadeIn 0.2s forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
 }
