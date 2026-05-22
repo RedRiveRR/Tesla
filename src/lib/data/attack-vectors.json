@@ -1,0 +1,26 @@
+[
+  {
+    "vector": "Bluetooth Baseband",
+    "description": "The initial entry point was the Bluetooth chipset of the vehicle. By sending specially crafted Bluetooth packets, researchers were able to trigger a heap overflow in the Bluetooth stack.",
+    "severity": "Critical",
+    "protocol": "BIP (Bluetooth Imaging Protocol)"
+  },
+  {
+    "vector": "Heap Overflow Vulnerability",
+    "description": "A memory corruption vulnerability (heap overflow) in the handling of Bluetooth connections. This allowed the execution of arbitrary code within the context of the Bluetooth subsystem.",
+    "severity": "Critical",
+    "impact": "Code Execution"
+  },
+  {
+    "vector": "Out-of-Bounds Write",
+    "description": "Following the heap overflow, an out-of-bounds write was utilized to gain further control, allowing the exploit to escalate privileges from the Bluetooth chipset to the main infotainment system.",
+    "severity": "Critical",
+    "impact": "Privilege Escalation"
+  },
+  {
+    "vector": "Infotainment System (MCU) Pivot",
+    "description": "Once execution was achieved on the Bluetooth chipset, researchers pivoted to the main infotainment system, bypassing security boundaries separating the external communication interfaces from the internal vehicle network.",
+    "severity": "High",
+    "impact": "System Compromise"
+  }
+]
