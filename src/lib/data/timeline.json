@@ -1,0 +1,22 @@
+[
+  {
+    "date": "March 2023",
+    "event": "Pwn2Own Vancouver 2023 Hacking Contest",
+    "details": "Synacktiv team participates in the automotive category targeting Tesla vehicles."
+  },
+  {
+    "date": "March 23, 2023",
+    "event": "Exploitation of Tesla Model 3",
+    "details": "Synacktiv successfully demonstrates a chain of exploits starting from the Bluetooth baseband, achieving root access to the infotainment system."
+  },
+  {
+    "date": "March 23, 2023",
+    "event": "Disclosure & Bounty",
+    "details": "The vulnerabilities are responsibly disclosed to Tesla via the Zero Day Initiative (ZDI). Synacktiv is awarded $250,000 and a Tier 2 prize."
+  },
+  {
+    "date": "Spring 2023",
+    "event": "Over-The-Air (OTA) Patch",
+    "details": "Tesla releases a software update via OTA to address the heap overflow and out-of-bounds write vulnerabilities in the Bluetooth stack."
+  }
+]
