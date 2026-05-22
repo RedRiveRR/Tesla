@@ -1,0 +1,6 @@
+{
+  "patch_status": "Patched",
+  "patch_method": "Over-The-Air (OTA) Firmware Update",
+  "recommendation_for_users": "Ensure the vehicle software is always updated to the latest version provided by Tesla. The primary defense against these exploits is maintaining updated firmware.",
+  "system_hardening": "Tesla uses multiple layers of security (sandboxing, firewalls). The exploit demonstrated at Pwn2Own bypassed these by chaining vulnerabilities. Future mitigations involve stricter memory management within the Bluetooth stack and better isolation between the external communication chipsets and the internal MCU."
+}
