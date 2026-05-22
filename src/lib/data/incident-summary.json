@@ -1,0 +1,9 @@
+{
+  "title": "Tesla Infotainment Root via Bluetooth Baseband",
+  "target": "Tesla Model 3 Infotainment System (MCU)",
+  "discoverer": "Synacktiv (Pwn2Own Vancouver 2023)",
+  "vulnerability_type": "Heap Overflow / Out-of-Bounds Write",
+  "component": "Bluetooth Baseband Chipset & Pairing Stack (BIP)",
+  "bounty": "$250,000 & Tier 2 Award",
+  "summary": "Researchers reverse-engineered the Tesla MCU baseband firmware, discovering a heap overflow in the Bluetooth pairing stack that allowed unlocking the vehicle remotely and achieving root privileges on the infotainment system."
+}
