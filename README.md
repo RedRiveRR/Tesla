@@ -37,11 +37,9 @@ Sıradan bir statik rapor hazırlamak yerine, **Glassmorphism**, **Cyberpunk est
 
 Geliştirilen interaktif Cybersecurity Dashboard, hocalar ve araştırmacılar için veriyi yalnızca metin olarak sunmaz; interaktif grafikler ve canlı simülasyonlarla destekler.
 
-<div align="center">
-  <video src="https://github.com/RedRiveRR/Tesla/raw/main/public/assets/site_demo.mp4" controls autoplay loop muted playsinline width="100%"></video>
-  <br>
-  <em>Figür 1: Canlı Red/Blue Team Simülasyonu ve CVSS Radar Analizine sahip Dashboard Arayüzü (Video Demo)</em>
-</div>
+https://github.com/RedRiveRR/Tesla/raw/main/public/assets/site_demo.mp4
+
+*Figür 1: Canlı Red/Blue Team Simülasyonu ve CVSS Radar Analizine sahip Dashboard Arayüzü (Video Demo)*
 
 ---
 
@@ -73,11 +71,9 @@ Bu depo, modern Frontend teknolojilerini, DevOps altyapısını ve Red/Blue Team
 
 Proje sadece arayüzden ibaret değildir. `scripts/` dizininde, zafiyetin gerçek dünyada nasıl sömürüldüğünü ve bir IPS/IDS (Saldırı Tespit Sistemi) tarafından nasıl engellendiğini kanıtlayan kurgusal Python scriptleri mevcuttur.
 
-<div align="center">
-  <video src="https://github.com/RedRiveRR/Tesla/raw/main/public/assets/terminal_demo.mp4" controls autoplay loop muted playsinline width="100%"></video>
-  <br>
-  <em>Figür 2: Red vs Blue Team Canlı Terminal Simülasyonu (Video Demo)</em>
-</div>
+https://github.com/RedRiveRR/Tesla/raw/main/public/assets/terminal_demo.mp4
+
+*Figür 2: Red vs Blue Team Canlı Terminal Simülasyonu (Video Demo)*
 
 **Test etmek için:**
 ```bash
