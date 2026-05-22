@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tesla Vulnerability Recon Dashboard</title>
+    <link rel="stylesheet" href="/src/style.css" />
+    <!-- Google Fonts for modern typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <header class="cyber-header">
+        <div class="logo">
+          <span class="glitch-text" data-text="TESLA">TESLA</span>
+          <span class="sub-text">INFOTAINMENT ROOT PoC</span>
+        </div>
+        <div class="status-indicator">
+          <span class="blinking-dot"></span> SYSTEM COMPROMISED
+        </div>
+      </header>
+
+      <main class="grid-layout">
+        <section class="glass-panel" id="incident-summary">
+          <h2>[+] Incident Summary</h2>
+          <div id="summary-content" class="content-box">
+            <!-- Populated by JS -->
+          </div>
+        </section>
+
+        <section class="glass-panel" id="attack-vectors">
+          <h2>[+] Exploit Chain Vectors</h2>
+          <div id="vectors-content" class="content-box">
+            <!-- Populated by JS -->
+          </div>
+        </section>
+
+        <section class="glass-panel" id="timeline">
+          <h2>[+] Execution Timeline</h2>
+          <div id="timeline-content" class="content-box">
+            <!-- Populated by JS -->
+          </div>
+        </section>
+
+        <section class="glass-panel warning-panel" id="mitigation">
+          <h2>[!] Defense & Mitigation</h2>
+          <div id="mitigation-content" class="content-box">
+            <!-- Populated by JS -->
+          </div>
+        </section>
+      </main>
+
+      <footer class="cyber-footer">
+        <p>Target: MCU Baseband | Protocol: Bluetooth (BIP) | Status: Patched</p>
+      </footer>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
