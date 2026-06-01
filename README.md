@@ -12,7 +12,8 @@
                                                            
 ```
 
-**Course:** Bilgi Güvenliği Teknolojileri - Siber Güvenlik Analizi ve Web PoC Projesi
+**Course Code:** ISU-404
+**Course Name:** Siber Güvenlik Analizi ve Web PoC Projesi
 **Researcher & Developer:** Mert Kızılırmak
 
 [![Vulnerability](https://img.shields.io/badge/CVE-2023--XXXX-red?style=for-the-badge)](https://github.com/RedRiveRR/Tesla)
@@ -64,6 +65,8 @@ Bu depo, modern Frontend teknolojilerini, DevOps altyapısını ve Red/Blue Team
 *   **Modüler Veri Kaynağı:** Projedeki tüm olay geçmişi ve veriler `src/lib/data/` altındaki `.json` mimarisinden modüler şekilde okunur.
 *   **DevOps (Docker):** Saldırı / Savunma laboratuvarının ağını dünyadan izole etmek adına `docker-compose` mimarisiyle konteynerize edilmiştir.
 *   **CI/CD Entegrasyonu:** Kod her pushlandığında çalışacak GitHub Actions SAST güvenlik tarayıcıları yapılandırılmıştır.
+
+> **💡 Derin Araştırma Raporları:** Zafiyetin Root-Cause (Kök-Neden) analizleri, OOB (Out-of-Bounds) Write detayları ve teknik araştırma sonuçları için lütfen projeye dahil edilen [research/](file:///c:/Users/adaki/OneDrive/Desktop/Tesla/research/) klasörüne göz atın.
 
 ---
 
