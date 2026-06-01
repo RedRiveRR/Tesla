@@ -12,8 +12,10 @@
                                                            
 ```
 
-**Course Code:** ISU-404
-**Course Name:** Siber Güvenlik Analizi ve Web PoC Projesi
+**Department:** Bilişim Güvenliği Teknolojileri
+**Course Code:** BGT006
+**Course Name:** Sızma Testi
+**Instructor:** Keyvan Arasteh Abbasabad
 **Researcher & Developer:** Mert Kızılırmak
 
 [![Vulnerability](https://img.shields.io/badge/CVE-2023--XXXX-red?style=for-the-badge)](https://github.com/RedRiveRR/Tesla)
