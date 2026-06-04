@@ -36,7 +36,17 @@ Sıradan bir statik rapor hazırlamak yerine, **Glassmorphism**, **Cyberpunk est
 
 ---
 
-## 📊 2. Visualization & Interface (Dashboard Önizlemesi)
+## 🎯 2. Beklenen Teslimler (Zafiyet Değerlendirme Raporu)
+Hocanın "Zafiyet Değerlendirme Raporu" (Vulnerability Assessment) yönergesine uygun olarak hazırlanan simüle edilmiş resmi belgeler `reports/` klasöründe sunulmuştur:
+
+- [x] **Nessus/OpenVAS Tarama Raporları:** [01_OpenVAS_Scan_Report.md](file:///c:/Users/adaki/OneDrive/Desktop/Tesla/reports/01_OpenVAS_Scan_Report.md)
+- [x] **Risk Matrisi ve Önceliklendirme:** [02_Risk_Matrix_and_Prioritization.md](file:///c:/Users/adaki/OneDrive/Desktop/Tesla/reports/02_Risk_Matrix_and_Prioritization.md)
+- [x] **Düzeltme Önerileri (Remediation) Raporu:** [03_Remediation_Plan.md](file:///c:/Users/adaki/OneDrive/Desktop/Tesla/reports/03_Remediation_Plan.md)
+- [x] **CVE Eşleştirme ve CVSS Skorlama:** Tüm dokümanlar `CVE-2023-XXXX` (CVSS 9.8) üzerine kurgulanmıştır.
+
+---
+
+## 📊 3. Visualization & Interface (Dashboard Önizlemesi)
 
 Geliştirilen interaktif Cybersecurity Dashboard, hocalar ve araştırmacılar için veriyi yalnızca metin olarak sunmaz; interaktif grafikler ve canlı simülasyonlarla destekler.
 
