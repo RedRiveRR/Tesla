@@ -18,7 +18,7 @@
 **Instructor:** Keyvan Arasteh Abbasabad
 **Researcher & Developer:** Mert Kızılırmak
 
-[![Vulnerability](https://img.shields.io/badge/CVE-2023--XXXX-red?style=for-the-badge)](https://github.com/RedRiveRR/Tesla)
+[![Vulnerability](https://img.shields.io/badge/CVE-2023--32157-red?style=for-the-badge)](https://github.com/RedRiveRR/Tesla)
 [![Target](https://img.shields.io/badge/Target-Tesla%20MCU%20Baseband-blue?style=for-the-badge)](https://github.com/RedRiveRR/Tesla)
 [![Status](https://img.shields.io/badge/Status-Patched%20(OTA)-success?style=for-the-badge)](https://github.com/RedRiveRR/Tesla)
 [![Docker](https://img.shields.io/badge/Docker-Supported-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://github.com/RedRiveRR/Tesla)
