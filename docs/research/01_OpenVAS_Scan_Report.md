@@ -18,7 +18,7 @@ The target host was scanned using OpenVAS (Greenbone Security Assistant). The sc
 
 ## 3. Vulnerability Details
 
-### [CRITICAL] Tesla Bluetooth Baseband Heap Overflow (CVE-2023-XXXX)
+### [CRITICAL] Tesla Bluetooth Baseband Heap Overflow (CVE-2023-32157)
 - **CVSS v3.1 Base Score:** 9.8 (Critical)
 - **Vector String:** `CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H`
 - **Family:** Buffer Overflow / Bluetooth
@@ -27,7 +27,7 @@ The target host was scanned using OpenVAS (Greenbone Security Assistant). The sc
   The target's Bluetooth baseband firmware is vulnerable to a Heap Buffer Overflow. An unauthenticated attacker within physical proximity can send malformed, oversized L2CAP packets. The firmware fails to validate the payload size, resulting in a memory corruption that allows for Out-of-Bounds (OOB) write primitives. This can be chained to achieve Remote Code Execution (RCE) on the main Infotainment unit (MCU).
 - **Impact:** Complete compromise of the Infotainment system. Potential for pivoting into the CAN bus network depending on the internal Gateway segregation.
 - **Solution:** Apply the latest Over-The-Air (OTA) firmware update provided by the manufacturer. Implement strict L2CAP packet size validation at the Intrusion Detection System (IDS) level.
-- **CVE Reference:** CVE-2023-XXXX
+- **CVE Reference:** CVE-2023-32157
 
 ### [MEDIUM] Bluetooth Discoverable Mode Enabled
 - **CVSS v3.1 Base Score:** 4.3 (Medium)

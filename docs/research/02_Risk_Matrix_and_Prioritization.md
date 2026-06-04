@@ -31,7 +31,7 @@ Risk skorları, **Etki (Impact)** ve **İhtimal (Likelihood)** değerlerinin ça
 
 Tespit edilen bulgular, Risk Matrisine göre en yüksek skordan en düşüğe doğru önceliklendirilmiştir:
 
-### 🔴 Öncelik 1: Tesla Bluetooth Baseband Heap Overflow (CVE-2023-XXXX)
+### 🔴 Öncelik 1: Tesla Bluetooth Baseband Heap Overflow (CVE-2023-32157)
 - **Etki:** Yüksek (3) - Doğrudan RCE ve root shell erişimi.
 - **İhtimal:** Yüksek (3) - Pwn2Own etkinliğinde kanıtlanmış, L2CAP pinglemesi kadar basittir.
 - **Risk Skoru:** 3 x 3 = **9 (Kritik Risk)**

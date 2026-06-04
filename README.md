@@ -37,12 +37,12 @@ Sıradan bir statik rapor hazırlamak yerine, **Glassmorphism**, **Cyberpunk est
 ---
 
 ## 🎯 2. Beklenen Teslimler (Zafiyet Değerlendirme Raporu)
-Hocanın "Zafiyet Değerlendirme Raporu" (Vulnerability Assessment) yönergesine uygun olarak hazırlanan simüle edilmiş resmi belgeler `reports/` klasöründe sunulmuştur:
+Hocanın "Zafiyet Değerlendirme Raporu" (Vulnerability Assessment) yönergesine uygun olarak hazırlanan simüle edilmiş resmi belgeler `docs/research/` klasöründe sunulmuştur:
 
-- [x] **Nessus/OpenVAS Tarama Raporları:** [01_OpenVAS_Scan_Report.md](file:///c:/Users/adaki/OneDrive/Desktop/Tesla/reports/01_OpenVAS_Scan_Report.md)
-- [x] **Risk Matrisi ve Önceliklendirme:** [02_Risk_Matrix_and_Prioritization.md](file:///c:/Users/adaki/OneDrive/Desktop/Tesla/reports/02_Risk_Matrix_and_Prioritization.md)
-- [x] **Düzeltme Önerileri (Remediation) Raporu:** [03_Remediation_Plan.md](file:///c:/Users/adaki/OneDrive/Desktop/Tesla/reports/03_Remediation_Plan.md)
-- [x] **CVE Eşleştirme ve CVSS Skorlama:** Tüm dokümanlar `CVE-2023-XXXX` (CVSS 9.8) üzerine kurgulanmıştır.
+- [x] **Nessus/OpenVAS Tarama Raporları:** [01_OpenVAS_Scan_Report.md](file:///c:/Users/adaki/OneDrive/Desktop/Tesla/docs/research/01_OpenVAS_Scan_Report.md)
+- [x] **Risk Matrisi ve Önceliklendirme:** [02_Risk_Matrix_and_Prioritization.md](file:///c:/Users/adaki/OneDrive/Desktop/Tesla/docs/research/02_Risk_Matrix_and_Prioritization.md)
+- [x] **Düzeltme Önerileri (Remediation) Raporu:** [03_Remediation_Plan.md](file:///c:/Users/adaki/OneDrive/Desktop/Tesla/docs/research/03_Remediation_Plan.md)
+- [x] **CVE Eşleştirme ve CVSS Skorlama:** Tüm dokümanlar `CVE-2023-32157` (CVSS 9.8) üzerine kurgulanmıştır.
 
 ---
 
@@ -78,13 +78,13 @@ Bu depo, modern Frontend teknolojilerini, DevOps altyapısını ve Red/Blue Team
 *   **DevOps (Docker):** Saldırı / Savunma laboratuvarının ağını dünyadan izole etmek adına `docker-compose` mimarisiyle konteynerize edilmiştir.
 *   **CI/CD Entegrasyonu:** Kod her pushlandığında çalışacak GitHub Actions SAST güvenlik tarayıcıları yapılandırılmıştır.
 
-> **💡 Derin Araştırma Raporları:** Zafiyetin Root-Cause (Kök-Neden) analizleri, OOB (Out-of-Bounds) Write detayları ve teknik araştırma sonuçları için lütfen projeye dahil edilen [research/](file:///c:/Users/adaki/OneDrive/Desktop/Tesla/research/) klasörüne göz atın.
+> **💡 Derin Araştırma Raporları:** Zafiyetin Root-Cause (Kök-Neden) analizleri, OOB (Out-of-Bounds) Write detayları ve teknik araştırma sonuçları için lütfen projeye dahil edilen [docs/research/](file:///c:/Users/adaki/OneDrive/Desktop/Tesla/docs/research/) klasörüne göz atın.
 
 ---
 
 ## ⚔️ 5. Red vs Blue Team Simulation (Hacker Uçbirimi)
 
-Proje sadece arayüzden ibaret değildir. `scripts/` dizininde, zafiyetin gerçek dünyada nasıl sömürüldüğünü ve bir IPS/IDS (Saldırı Tespit Sistemi) tarafından nasıl engellendiğini kanıtlayan kurgusal Python scriptleri mevcuttur.
+Proje sadece arayüzden ibaret değildir. `src/scripts/` dizininde, zafiyetin gerçek dünyada nasıl sömürüldüğünü ve bir IPS/IDS (Saldırı Tespit Sistemi) tarafından nasıl engellendiğini kanıtlayan kurgusal Python scriptleri mevcuttur.
 
 ![Terminal Demo](./public/assets/terminal_demo.gif)
 
@@ -93,14 +93,14 @@ Proje sadece arayüzden ibaret değildir. `scripts/` dizininde, zafiyetin gerçe
 **Test etmek için:**
 ```bash
 # 1. Aşama: Red Team Keşif (Recon) İşlemi
-python3 scripts/01_recon_bluetooth.py
+python3 src/scripts/01_recon_bluetooth.py
 
 # 2. Aşama: Red Team Saldırı (Exploit) Simülasyonu
-python3 scripts/02_exploit_heap_overflow.py --target "9C:43:1E:XX:XX:XX"
+python3 src/scripts/02_exploit_heap_overflow.py --target "9C:43:1E:XX:XX:XX"
 
 # 3. Aşama: Blue Team Savunma (IDS) Simülasyonu
 # Saldırganın L2CAP ping paketlerini yakalayıp banlayan mekanizma
-python3 scripts/03_defense_ids.py
+python3 src/scripts/03_defense_ids.py
 ```
 
 *(Not: Bu simülasyonların çalışması, arayüzdeki "Live SecOps Simulation" paneline de anlık olarak entegre edilmiş bir biçimde sergilenmektedir.)*

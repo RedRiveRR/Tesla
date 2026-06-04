@@ -139,7 +139,7 @@ function startTerminals() {
     "    [OK] Normal ping packet received (Size: 62 bytes)",
     "[!] WARNING: Anomalous traffic detected!",
     "    [>] Source: Unknown | Protocol: L2CAP | Size: 1028 bytes",
-    "    [>] Signature Match: HEAP_OVERFLOW_CVE-2023-XXXX",
+    "    [>] Signature Match: HEAP_OVERFLOW_CVE-2023-32157",
     "[X] MALICIOUS PAYLOAD INTERCEPTED",
     "[*] Dropping packet and blacklisting MAC...",
     "[+] Defense successful. System secured."

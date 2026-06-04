@@ -28,7 +28,7 @@ def monitor_traffic():
     print("\n\033[93m[!] WARNING: Anomalous traffic detected!\033[0m")
     time.sleep(0.5)
     print("    [>] Source: Unknown | Protocol: L2CAP | Size: 1028 bytes")
-    print("    [>] Signature Match: HEAP_OVERFLOW_CVE-2023-XXXX")
+    print("    [>] Signature Match: HEAP_OVERFLOW_CVE-2023-32157")
     time.sleep(1.5)
 
     print("\n\033[91m[X] MALICIOUS PAYLOAD INTERCEPTED\033[0m")
