@@ -1,30 +1,39 @@
 <div align="center">
+  <a href="https://istinye.edu.tr">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/%C4%B0stinye_%C3%9Cniversitesi_logo.svg/1280px-%C4%B0stinye_%C3%9Cniversitesi_logo.svg.png" alt="İstinye Üniversitesi" width="180"/>
+  </a>
 
-# 🏎️ Tesla Infotainment SecOps PoC
-### 🎓 **Academic Research Project on Automotive Cyber Security**
+  # Tesla MCU Baseband RCE (CVE-2023-32157) Red vs Blue Simulation
 
-```text
-  _____ _____ ____  _        _      ____   ___   ___ _____ 
- |_   _| ____/ ___|| |      / \    |  _ \ / _ \ / _ \_   _|
-   | | |  _| \___ \| |     / _ \   | |_) | | | | | | || |  
-   | | | |___ ___) | |___ / ___ \  |  _ <| |_| | |_| || |  
-   |_| |_____|____/|_____/_/   \_\ |_| \_\\___/ \___/ |_|  
-                                                           
-```
-
-**Department:** Bilişim Güvenliği Teknolojileri
-**Course Code:** BGT006
-**Course Name:** Sızma Testi
-**Instructor:** Keyvan Arasteh Abbasabad
-**Researcher & Developer:** Mert Kızılırmak
-
-[![Vulnerability](https://img.shields.io/badge/CVE-2023--32157-red?style=for-the-badge)](https://github.com/RedRiveRR/Tesla)
-[![Target](https://img.shields.io/badge/Target-Tesla%20MCU%20Baseband-blue?style=for-the-badge)](https://github.com/RedRiveRR/Tesla)
-[![Status](https://img.shields.io/badge/Status-Patched%20(OTA)-success?style=for-the-badge)](https://github.com/RedRiveRR/Tesla)
-[![Docker](https://img.shields.io/badge/Docker-Supported-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://github.com/RedRiveRR/Tesla)
-[![Python](https://img.shields.io/badge/Python-Red/Blue_Team-yellow?style=for-the-badge&logo=python&logoColor=white)](https://github.com/RedRiveRR/Tesla)
-
+  ![GitHub](https://img.shields.io/badge/GitHub-Private-red?style=flat-square&logo=github)
+  ![Dil](https://img.shields.io/badge/Dil-Python_|_TypeScript-blue?style=flat-square)
+  ![Durum](https://img.shields.io/badge/Durum-Tamamlandı-yellow?style=flat-square)
+  ![Ders](https://img.shields.io/badge/Ders-BGT006-purple?style=flat-square)
 </div>
+
+### Danışman Bilgisi
+| | |
+| :--- | :--- |
+| **Ad Soyad** | Keyvan Arasteh |
+| **GitHub** | [@keyvanarasteh](https://github.com/keyvanarasteh) |
+| **E-posta** | keyvan.arasteh@istinye.edu.tr |
+| **LinkedIn** | [keyvanarasteh](https://linkedin.com/in/keyvanarasteh) |
+| **Web Sitesi** | [qline.tech](https://qline.tech) |
+
+### Öğrenci Bilgisi
+| | |
+| :--- | :--- |
+| **Ad Soyad** | Mert Kızılırmak |
+| **Öğrenci No** | 2520**1019 |
+
+### Ders Bilgileri
+| | |
+| :--- | :--- |
+| **Ders Adı** | Sızma Testi |
+| **Ders Kodu** | BGT006 |
+| **Kredi** | 3 AKTS |
+| **Ön Koşullar** | Ağ Temelleri, Linux CLI, Python |
+| **Dönem** | 2025-2026 Bahar |
 
 ---
 
