@@ -5,7 +5,6 @@
 
   # Tesla MCU Baseband RCE (CVE-2023-32157) Red vs Blue Simulation
 
-  ![GitHub](https://img.shields.io/badge/GitHub-Private-red?style=flat-square&logo=github)
   ![Dil](https://img.shields.io/badge/Dil-Python_|_TypeScript-blue?style=flat-square)
   ![Durum](https://img.shields.io/badge/Durum-Tamamlandı-yellow?style=flat-square)
   ![Ders](https://img.shields.io/badge/Ders-BGT006-purple?style=flat-square)
